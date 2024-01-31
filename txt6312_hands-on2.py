@@ -46,6 +46,7 @@ def txt6312_sort_b(arr):
             if arr[min_idx] > arr[j]:
                 min_idx = j
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
+        assert all(arr[k] <= arr[k + 1] for k in range(i)), "Invariant failed: Array is not sorted"
 
 def txt6312_sort_c(arr):
     for i in range(len(arr)):
@@ -75,7 +76,7 @@ ax.plot(sizes, times_b, label='Sort B', marker='o')
 ax.plot(sizes, times_c, label='Sort C', marker='o')
 ax.set_xlabel('Size')
 ax.set_ylabel('Time (s)')
-ax.set_title('Sorting Benchmarks')
+ax.set_title('txt6312_Sorting_Benchmarks')
 ax.legend()
 ax.grid(True)
 

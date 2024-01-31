@@ -1,0 +1,6 @@
+Empirical performance data, like that displayed in a benchmark graph, is insufficient to prove the correctness of a sorting algorithm, such as selection sort. Rather, the argument for correctness usually rests on the logic of the algorithm and demonstrates that it satisfies two requirements:
+
+Termination: Following a set number of steps, the algorithm comes to an end.
+An invariant property is one that is true both before and after the loop iterates, guaranteeing that the algorithm moves closer to the sorted state.
+
+The invariant for selection sort is that the first i elements of the array are the smallest i elements of the array and are sorted in order after the i-th iteration. The array is sorted as a whole when the loop is completed and i equals the array's length.
